@@ -8,12 +8,6 @@ window.onload = function () {
   var wordBank = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
   var word = wordBank[Math.floor(Math.random() * wordBank.length)];
 
-//create letter placeholders
-  var answerArray = [];
-  for (var i = 0; i < word.length; i++) {
-    answerArray[i] = "_ ";
-  };
-
 //create letter buttons
   for(var i = 0; i < letterArray.length; i++)
   {
@@ -27,13 +21,11 @@ window.onload = function () {
 
 //show word spaces
   $('#startButton').on('click', function() {
-    $('#spaces').html(answerArray);
-    $('')
-  });
-
-//reset game
-  $('#resetButton').on('click', function() {
-    $('#spaces').replace();
+    var placeHolders = [];
+    for (var i = 0; i < word.length; i++) {
+      placeHolders[i] = "_ ";
+    };
+    $('#spaces').html(placeHolders);
   });
 }
 
