@@ -1,0 +1,36 @@
+body {
+  text-align: center;
+  background-color: #d6baff; /*lavender*/
+  color: white;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 75px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+button {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    color: #d6baff;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
