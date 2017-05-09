@@ -1,13 +1,16 @@
 body {
   text-align: center;
   background-color: #d6baff; /*lavender*/
-  color: white;
+  color: #f7f7f7;
 }
 
 h1 {
+  color: white;
   font-family: 'Shrikhand', cursive;
   font-size: 75px;
   margin-bottom: 0px;
+  margin-top: 0px;
+  text-shadow: 5px 5px brown;
 }
 
 h3 {
@@ -27,10 +30,16 @@ button {
     background-color: white;
     font-family: 'Open Sans', sans-serif;
     border: none;
-    color: #d6baff;
+    color: brown;
     padding: 10px 30px;
     margin-top: 20px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
 }
+
+div {
+  font-size: 75px;
+  margin-top: 30px;
+}
+
