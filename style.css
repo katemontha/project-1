@@ -29,6 +29,11 @@ div {
   font-family: 'Poiret One', cursive;
   font-size: 50px;
   margin-top: 25px;
+  color: white;
+}
+
+button:hover {
+  background-color: #d1eeff;
 }
 
 .instructions {
@@ -50,6 +55,7 @@ div {
   margin: 0 1px;
   padding: 10px 15px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .startButton {
@@ -80,7 +86,7 @@ div {
   width: 10em;
 }
 
-.refreshButton {
+.resetButton {
   background-color: white;
   border-style: none;
   color: brown;
@@ -98,7 +104,7 @@ div {
   font-family: 'Miriam Libre', sans-serif;
   font-size: 75px;
   letter-spacing: 40px;
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
 #clicked {
