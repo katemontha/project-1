@@ -23,12 +23,11 @@ window.onload = function () {
     }
   });
 
-//
+//assign string to guess
   $(".letterChoices").click(function(event) {
-    var guess = event.target.innerHTML;
-    debugger;
+    guess = event.target.innerHTML;
     return guess;
-    });
+  });
 }
 
 
