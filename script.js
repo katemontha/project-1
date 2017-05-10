@@ -19,17 +19,16 @@ window.onload = function () {
 
     //create letter buttons
     for(var i = 0; i < letterArray.length; i++) {
-      $('.letterChoices').append("<button id = '" + letterArray[i] + "'>" + letterArray[i] + "</button>");
+      $('.letterChoices').append("<button>" + letterArray[i] + "</button>");
     }
   });
 
- //assign
- $("button").click(function() {
-      var guess = ($(this).text());
-      return guess;
-  });
-
- console.log(guess)
+//
+  $(".letterChoices").click(function(event) {
+    var guess = event.target.innerHTML;
+    debugger;
+    return guess;
+    });
 }
 
 
