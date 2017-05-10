@@ -20,7 +20,7 @@ window.onload = function () {
 
     //create letter buttons
     for(var i = 0; i < letterArray.length; i++) {
-      $('.letterChoices').append("<button>" + letterArray[i] + "</button>");
+      $('.letterChoices').append("<button class = 'letterButton'>" + letterArray[i] + "</button>");
     }
     return placeHolders;
   });

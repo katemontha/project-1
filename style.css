@@ -32,8 +32,11 @@ div {
   margin-top: 25px;
 }
 
+.active {
+  background-color: yellow;
+}
 
-button {
+.letterButton {
   background-color: white;
   border-style: none;
   color: brown;
@@ -46,6 +49,15 @@ button {
 }
 
 #startButton {
+  background-color: white;
+  border-style: none;
+  color: brown;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0 1px;
+  padding: 10px 15px;
+  text-align: center;
   border-radius: 25px;
 }
 
