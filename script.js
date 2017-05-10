@@ -46,12 +46,12 @@ window.onload = function () {
       }
     //if user runs out of moves alert game over
     if (moves === 0) {
-      alert("Game over");
+      alert("You'll get it next time... (Refresh to play again.)");
       $('#spaces').html(word);
     }
     //if user guesses word alert congrats
-    if (placeHolders.join("") === word) {
-      alert("You won!")
+    if (placeHolders.join("") == word) {
+      alert("How'd you know?! (Refresh to play again.)")
     }
   });
 }
