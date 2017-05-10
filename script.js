@@ -1,7 +1,6 @@
 window.onload = function () {
 
   var letterArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-  var guesses = [];
   var moves = 10;
   var guess;
 
@@ -34,12 +33,27 @@ window.onload = function () {
     //check if word contains clicked letter
     if (word.indexOf(guess) > -1) {
       console.log("found");
+      for (var i = 0; i < word.length; i++) {
+        if (word[i] === guess) {
+          placeHolders[i] === guess;
+          //$('#spaces').html(guess);
+        }
+      }
+
+
+/*var index = items.indexOf(3452);
+
+if (index !== -1) {
+    items[index] = 1010;
+}*/
+
+
+
     } else {
       //subtract 1 from moves left
       console.log('not found');
       moves--;
       $('.movesLeft').html(moves);
-      debugger;
     }
   });
 }
