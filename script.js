@@ -8,17 +8,6 @@ window.onload = function () {
   var wordBank = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
   var word = wordBank[Math.floor(Math.random() * wordBank.length)];
 
-//create letter buttons
-  for(var i = 0; i < letterArray.length; i++)
-  {
-    $('#letterChoices').html("<div>");
-      for(var j = 0; j < letterArray[i].length; j++)
-      {
-        $('#letterChoices').html("<input type='button' value='" + letterArray[i][j] + "'/>");
-      }
-      $('#letterChoices').html("</div>");
-  }
-
 //show word spaces
   $('#startButton').on('click', function() {
     var placeHolders = [];
@@ -26,7 +15,14 @@ window.onload = function () {
       placeHolders[i] = "_ ";
     };
     $('#spaces').html(placeHolders);
+    //create letter buttons
+    for(var i = 0; i < letterArray.length; i++) {
+      $('#letterChoices').append("<button>" + letterArray[i] + "</button>");
+  }
   });
+
+
+
 }
 
 
