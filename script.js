@@ -39,15 +39,19 @@ window.onload = function () {
         }
       }
       $('#spaces').html(placeHolders);
-    } else {
-      //subtract 1 from moves left
+    } else { //subtract 1 from moves left
       console.log('not found');
       moves--;
       $('.movesLeft').html(moves);
-    }
+      }
+    //if user runs out of moves alert game over
     if (moves === 0) {
       alert("Game over");
       $('#spaces').html(word);
+    }
+    //if user guesses word alert congrats
+    if (placeHolders.join("") === word) {
+      alert("You won!")
     }
   });
 }
