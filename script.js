@@ -6,9 +6,10 @@ window.onload = function () {
   var placeHolders = [];
 
   var wordBank = ['FRANK', 'CHARLIE', 'DENNIS', 'SWEET DEE', 'MAC', 'CRICKET', 'WAITRESS'];
-  var word = wordBank[Math.floor(Math.random() * wordBank.length)];
+  var randomIndex = Math.floor(Math.random() * wordBank.length)
+  var word = wordBank[randomIndex];
 
-//start game
+  //start button opens interface
   $('.startButton').one('click', function() {
     //replace letters in word with place holders
     for (var i = 0; i < word.length; i++) {
@@ -21,14 +22,16 @@ window.onload = function () {
     for(var i = 0; i < letterArray.length; i++) {
       $('.letterList').append("<button class = 'letterButton'>" + letterArray[i] + "</button>");
     }
-    //display hint
-    $('.hint').html("Hint: It's Always Sunny In Philadephia")
-    return placeHolders;
+    //hint button adds hint
+    $('.hintButton').one('click', function() {
+      $('.hint').html("Hint: It's Always Sunny In Philadephia")
+    });
+  return placeHolders;
   });
 
-//onclick function
+  //onclick function
   $(".letterList").click(function(event) {
-    //create variable for clicked letter
+    //assign variable to clicked letter
     guess = event.target.innerHTML;
     //fade button after click
     if (guess.length === 1) {
@@ -43,7 +46,8 @@ window.onload = function () {
         }
       }
       $('.spaces').html(placeHolders);
-    } else { //subtract 1 from moves left
+    } else {
+         //subtract 1 from moves left
         if (guess.length === 1 && moves > 0) {
             moves--;
             $('.movesLeft').html(moves);

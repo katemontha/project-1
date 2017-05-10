@@ -80,6 +80,20 @@ div {
   width: 10em;
 }
 
+.refreshButton {
+  background-color: white;
+  border-style: none;
+  color: brown;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0 1px;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 25px;
+  width: 10em;
+}
+
 .spaces {
   font-family: 'Miriam Libre', sans-serif;
   font-size: 75px;
