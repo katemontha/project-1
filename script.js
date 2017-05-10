@@ -12,7 +12,7 @@ window.onload = function () {
   $('#startButton').one('click', function() {
     //replace letters in word with place holders
     for (var i = 0; i < word.length; i++) {
-      placeHolders[i] = "_ ";
+      placeHolders[i] = "_";
     };
     $('#spaces').html(placeHolders);
     //displays moves left
@@ -32,20 +32,22 @@ window.onload = function () {
     //check if word contains clicked letter
     if (word.indexOf(guess) > -1) {
       console.log("found");
-      console.log(placeHolders);
-
+      //replace place holder with clicked letter if correct
       for (var i = 0; i < word.length; i++) {
         if (word[i] === guess) {
-          console.log(guess);
-          console.log(word);
-          console.log(i);
+          placeHolders[i] = guess;
         }
       }
+      $('#spaces').html(placeHolders);
     } else {
       //subtract 1 from moves left
       console.log('not found');
       moves--;
       $('.movesLeft').html(moves);
+    }
+    if (moves === 0) {
+      alert("Game over");
+      $('#spaces').html(word);
     }
   });
 }
