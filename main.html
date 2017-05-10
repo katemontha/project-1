@@ -11,16 +11,15 @@
   <header>
     <h1>Welcome to Hangman!</h1>
     <h3>Instructions:</h3>
-    <p>Figure out the word by guessing one letter at a time. You have 10 incorrected guesses. Click "Start Game" to begin.</p>
+    <p class = "instructions">Figure out the word by guessing one letter at a time. You have 10 incorrected guesses. Click "Start Game" to begin.</p>
   </header>
   <main>
-    <button id = "startButton">START GAME</button>
+    <button class = "startButton">START GAME</button>
+    <button class = "hintButton">HINT</button>
+    <p class = "hint"></p>
     <div class = "movesLeft"></div>
-    <div id = "spaces">
-    </div>
-    <div class = "letterChoices">
-    </div>
-    <div id = "usedLetters"></div>
+    <div class = "spaces"></div>
+    <div class = "letterList">
     </div>
   </main>
 <script

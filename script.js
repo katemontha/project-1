@@ -5,49 +5,54 @@ window.onload = function () {
   var guess;
   var placeHolders = [];
 
-  var wordBank = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
+  var wordBank = ['FRANK', 'CHARLIE', 'DENNIS', 'SWEET DEE', 'MAC', 'CRICKET', 'WAITRESS'];
   var word = wordBank[Math.floor(Math.random() * wordBank.length)];
 
 //start game
-  $('#startButton').one('click', function() {
+  $('.startButton').one('click', function() {
     //replace letters in word with place holders
     for (var i = 0; i < word.length; i++) {
       placeHolders[i] = "_";
     };
-    $('#spaces').html(placeHolders);
+    $('.spaces').html(placeHolders);
     //displays moves left
     $('.movesLeft').html(moves)
-
     //create letter buttons
     for(var i = 0; i < letterArray.length; i++) {
-      $('.letterChoices').append("<button class = 'letterButton'>" + letterArray[i] + "</button>");
+      $('.letterList').append("<button class = 'letterButton'>" + letterArray[i] + "</button>");
     }
+    //display hint
+    $('.hint').html("Hint: It's Always Sunny In Philadephia")
     return placeHolders;
   });
 
 //onclick function
-  $(".letterChoices").click(function(event) {
+  $(".letterList").click(function(event) {
     //create variable for clicked letter
     guess = event.target.innerHTML;
+    //fade button after click
+    if (guess.length === 1) {
+    $(event.target).attr('id', 'clicked');
+    }
     //check if word contains clicked letter
     if (word.indexOf(guess) > -1) {
-      console.log("found");
       //replace place holder with clicked letter if correct
       for (var i = 0; i < word.length; i++) {
         if (word[i] === guess) {
           placeHolders[i] = guess;
         }
       }
-      $('#spaces').html(placeHolders);
+      $('.spaces').html(placeHolders);
     } else { //subtract 1 from moves left
-      console.log('not found');
-      moves--;
-      $('.movesLeft').html(moves);
+        if (guess.length === 1 && moves > 0) {
+            moves--;
+            $('.movesLeft').html(moves);
+        }
       }
     //if user runs out of moves alert game over
     if (moves === 0) {
       alert("You'll get it next time... (Refresh to play again.)");
-      $('#spaces').html(word);
+      $('.spaces').html(word);
     }
     //if user guesses word alert congrats
     if (placeHolders.join("") == word) {

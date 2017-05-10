@@ -22,7 +22,6 @@ h3 {
 
 p {
   font-family: 'Open Sans', sans-serif;
-  font-style: italic;
   margin-top: 5px;
 }
 
@@ -32,8 +31,13 @@ div {
   margin-top: 25px;
 }
 
-.active {
-  background-color: yellow;
+.instructions {
+  font-style: italic;
+}
+
+.hint {
+  color: gray;
+  margin-top: 20px;
 }
 
 .letterButton {
@@ -48,7 +52,7 @@ div {
   text-align: center;
 }
 
-#startButton {
+.startButton {
   background-color: white;
   border-style: none;
   color: brown;
@@ -59,11 +63,31 @@ div {
   padding: 10px 15px;
   text-align: center;
   border-radius: 25px;
+  width: 10em;
 }
 
-#spaces {
+.hintButton {
+  background-color: white;
+  border-style: none;
+  color: brown;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0 1px;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 25px;
+  width: 10em;
+}
+
+.spaces {
   font-family: 'Miriam Libre', sans-serif;
   font-size: 75px;
   letter-spacing: 40px;
   margin-top: 50px;
+}
+
+#clicked {
+  background-color: #f0e5ff;
+  color: gray;
 }
