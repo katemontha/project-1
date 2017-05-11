@@ -4,6 +4,7 @@ window.onload = function () {
   var moves = 10;
   var guess;
   var placeHolders = [];
+  var guessed = [];
 
   var wordBank = ['FRANK', 'CHARLIE', 'DENNIS', 'SWEET DEE', 'MAC', 'CRICKET', 'WAITRESS'];
   var randomIndex = Math.floor(Math.random() * wordBank.length)
@@ -33,9 +34,12 @@ window.onload = function () {
   $(".letterList").click(function(event) {
     //assign variable to clicked letter
     guess = event.target.innerHTML;
-    //fade button after click
+    //fade and disable button after click
     if (guess.length === 1) {
-    $(event.target).attr('id', 'clicked');
+      $(event.target).attr({
+        id: "clicked",
+        disabled: true
+      });
     }
     //check if word contains clicked letter
     if (word.indexOf(guess) > -1) {
@@ -47,7 +51,7 @@ window.onload = function () {
       }
       $('.spaces').html(placeHolders);
     } else {
-         //subtract 1 from moves left
+        //subtract 1 from moves left
         if (guess.length === 1 && moves > 0) {
             moves--;
             $('.movesLeft').html(moves);
@@ -55,7 +59,7 @@ window.onload = function () {
       }
     //if user runs out of moves alert game over
     if (moves === 0) {
-      alert("You'll get it next time... (Refresh to play again.)");
+      alert("Maybe you'll get it next time... (Refresh to play again.)");
       $('.spaces').html(word);
     }
     //if user guesses word alert congrats

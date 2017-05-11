@@ -36,6 +36,11 @@ button:hover {
   background-color: #d1eeff;
 }
 
+button:focus {
+  outline:0;
+}
+
+
 .instructions {
   font-style: italic;
 }
