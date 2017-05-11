@@ -112,6 +112,10 @@ button:focus {
   margin-top: 75px;
 }
 
+.movesLeft {
+    color: brown;
+}
+
 #clicked {
   background-color: #f0e5ff;
   color: gray;

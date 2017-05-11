@@ -6,16 +6,16 @@ window.onload = function () {
   var placeHolders = [];
   var guessed = [];
 
-  var wordBank = ['FRANK', 'CHARLIE', 'DENNIS', 'SWEET DEE', 'MAC', 'CRICKET', 'WAITRESS'];
+  var wordBank = ['FRANK', 'CHARLIE', 'DENNIS', 'SWEETDEE', 'MAC', 'CRICKET', 'WAITRESS', 'RUMHAM', 'MILKSTEAK', 'KITTENMITTENS'];
   var randomIndex = Math.floor(Math.random() * wordBank.length)
   var word = wordBank[randomIndex];
 
   //start button opens interface
-  $('.startButton').one('click', function() {
+  //$('.startButton').one('click', function() {
     //replace letters in word with place holders
     for (var i = 0; i < word.length; i++) {
       placeHolders[i] = "_";
-    };
+    }
     $('.spaces').html(placeHolders);
     //displays moves left
     $('.movesLeft').html(moves)
@@ -27,8 +27,8 @@ window.onload = function () {
     $('.hintButton').one('click', function() {
       $('.hint').html("Hint: It's Always Sunny In Philadephia")
     });
-  return placeHolders;
-  });
+  //return placeHolders;
+  //});
 
   //onclick function
   $(".letterList").click(function(event) {
@@ -59,13 +59,18 @@ window.onload = function () {
       }
     //if user runs out of moves alert game over
     if (moves === 0) {
-      alert("Maybe you'll get it next time... (Refresh to play again.)");
+      alert("You'll get it next time... (Refresh to play again.)");
       $('.spaces').html(word);
     }
     //if user guesses word alert congrats
     if (placeHolders.join("") == word) {
       alert("How'd you know?! (Refresh to play again.)")
     }
+  });
+
+  //reload page for new word
+  $('.resetButton').on('click', function() {
+    location.reload();
   });
 }
 
