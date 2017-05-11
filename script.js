@@ -10,25 +10,21 @@ window.onload = function () {
   var randomIndex = Math.floor(Math.random() * wordBank.length)
   var word = wordBank[randomIndex];
 
-  //start button opens interface
-  //$('.startButton').one('click', function() {
-    //replace letters in word with place holders
-    for (var i = 0; i < word.length; i++) {
-      placeHolders[i] = "_";
-    }
-    $('.spaces').html(placeHolders);
-    //displays moves left
-    $('.movesLeft').html(moves)
-    //create letter buttons
-    for(var i = 0; i < letterArray.length; i++) {
-      $('.letterList').append("<button class = 'letterButton'>" + letterArray[i] + "</button>");
-    }
-    //hint button adds hint
-    $('.hintButton').one('click', function() {
-      $('.hint').html("Hint: It's Always Sunny In Philadephia")
-    });
-  //return placeHolders;
-  //});
+  //replace letters in word with place holders
+  for (var i = 0; i < word.length; i++) {
+    placeHolders[i] = "_";
+  }
+  $('.spaces').html(placeHolders);
+  //displays initial moves left
+  $('.movesLeft').html(moves)
+  //create letter buttons
+  for(var i = 0; i < letterArray.length; i++) {
+    $('.letterList').append("<button class = 'letterButton'>" + letterArray[i] + "</button>");
+  }
+  //hint button adds hint
+  $('.hintButton').one('click', function() {
+    $('.hint').html("Hint: Welcome to Paddy's Pub")
+  });
 
   //onclick function
   $(".letterList").click(function(event) {
