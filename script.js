@@ -1,11 +1,11 @@
 window.onload = function () {
 
+  //define varaibles
   var letterArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   var moves = 10;
   var guess;
   var placeHolders = [];
   var guessed = [];
-
   var wordBank = ['FRANK', 'CHARLIE', 'DENNIS', 'SWEETDEE', 'MAC', 'CRICKET', 'WAITRESS', 'RUMHAM', 'MILKSTEAK', 'KITTENMITTENS'];
   var randomIndex = Math.floor(Math.random() * wordBank.length)
   var word = wordBank[randomIndex];
