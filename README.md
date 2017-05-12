@@ -20,4 +20,5 @@ Designs - Google Fonts</p>
 FUTURE DEVELOPMENT:<br>
 Make it responsive<br>
 Add character<br>
+Change reset button function<br>
 Add audio</p>
