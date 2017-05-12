@@ -1,7 +1,8 @@
 body {
-  background-color: #d6baff; /*lavender*/
+  background-color: #d6baff;
   color: #f7f7f7;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -14,14 +15,12 @@ h1 {
 }
 
 h3 {
-  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   margin-bottom: 0px;
   text-transform: uppercase;
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
   margin-top: 5px;
 }
 

@@ -5,10 +5,16 @@ window.onload = function () {
   var moves = 10;
   var guess;
   var placeHolders = [];
-  var guessed = [];
   var wordBank = ['FRANK', 'CHARLIE', 'DENNIS', 'SWEETDEE', 'MAC', 'CRICKET', 'WAITRESS', 'RUMHAM', 'MILKSTEAK', 'KITTENMITTENS'];
-  var randomIndex = Math.floor(Math.random() * wordBank.length)
-  var word = wordBank[randomIndex];
+  var randomIndex;
+  var word;
+
+  var randomWord = function () {
+    randomIndex = Math.floor(Math.random() * wordBank.length);
+     word = wordBank[randomIndex];
+  }
+
+  randomWord();
 
   //replace letters in word with place holders
   for (var i = 0; i < word.length; i++) {
