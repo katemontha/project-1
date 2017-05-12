@@ -9,11 +9,11 @@ window.onload = function () {
   var randomIndex;
   var word;
 
+  //generate random word
   var randomWord = function () {
     randomIndex = Math.floor(Math.random() * wordBank.length);
      word = wordBank[randomIndex];
   }
-
   randomWord();
 
   //replace letters in word with place holders
