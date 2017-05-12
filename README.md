@@ -19,4 +19,5 @@ Designs - Google Fonts</p>
 
 FUTURE DEVELOPMENT:<br>
 Make it responsive<br>
+Add character<br>
 Add audio</p>
