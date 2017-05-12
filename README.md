@@ -21,4 +21,5 @@ FUTURE DEVELOPMENT:<br>
 Make it responsive<br>
 Add character<br>
 Change reset button function<br>
+Add categories<br>
 Add audio</p>
