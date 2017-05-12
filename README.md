@@ -10,3 +10,9 @@ Button fade out<br>
 Hint button<br>
 Refresh button<br>
 Hover css</p>
+
+<p>TECHNOLOGIES USED:<br>
+Languages - HTML5, CSS3, Javascript, jQuery
+Project Planning and User Stories - Trello
+Text Editor - Sublime Text 3
+Designs - Google Fonts
