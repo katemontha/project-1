@@ -12,11 +12,11 @@ Refresh button<br>
 Hover css</p>
 
 <p>TECHNOLOGIES USED:<br>
-Languages - HTML5, CSS3, Javascript, jQuery
-Project Planning and User Stories - Trello
-Text Editor - Sublime Text 3
-Designs - Google Fonts
+Languages - HTML5, CSS3, Javascript, jQuery<br>
+Project Planning and User Stories - Trello<br>
+Text Editor - Sublime Text 3<br>
+Designs - Google Fonts</p>
 
-FUTURE DEVELOPMENT:
-Make it responsive
-Add audio
+FUTURE DEVELOPMENT:<br>
+Make it responsive<br>
+Add audio</p>
