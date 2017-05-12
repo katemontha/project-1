@@ -16,3 +16,7 @@ Languages - HTML5, CSS3, Javascript, jQuery
 Project Planning and User Stories - Trello
 Text Editor - Sublime Text 3
 Designs - Google Fonts
+
+FUTURE DEVELOPMENT:
+Make it responsive
+Add audio
